@@ -2,8 +2,8 @@ import Electrodomesticos from "./Electrodomesticos.js";
 
 export default class Televisor extends Electrodomesticos{
 
-    constructor(consumo, procedencia, pulgadas, tdt){
-        super(consumo, procedencia);
+    constructor(consumo, nacionalidad, pulgadas, tdt){
+        super(consumo, nacionalidad);
         this.pulgadas = pulgadas;
         this.tdt = tdt;
     }
@@ -20,7 +20,7 @@ export default class Televisor extends Electrodomesticos{
         if(this.getTdt){
             this.precio += 250000;
         }
-        if(this.pulgadas > 40){
+        if(this.getPulgadas() > 40){
             this.precio += this.getPrecio() * 0.3;
         }
     }
