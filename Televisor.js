@@ -14,7 +14,7 @@ export default class Televisor extends Electrodomesticos{
     }
 
     getTdt(){
-        return this.pulgadas;
+        return this.tdt;
     }
 
     valorExtra(){

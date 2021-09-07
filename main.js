@@ -62,10 +62,9 @@ while(respuesta !== "3"){
                     }
                     else{esTdt = false;}
                     for (let i = 0; i < inventario.length; i++) {
-                    if (tipo == inventario[i].getTipo() && consumo == inventario[i].getConsumo() && nacionalidad == inventario[i].getNacionalidad()){
+                    if (tipo == inventario[i].getTipo() && consumo == inventario[i].getConsumo() && nacionalidad == inventario[i].getNacionalidad() && tamano == inventario[i].getPulgadas() && esTdt == inventario[i].getTdt() ){
                         carrito.push(inventario[i]);
                         inventario.splice(i,1);
-                        console.log(tamano);
                         break;
                     }
                     }
