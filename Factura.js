@@ -7,14 +7,13 @@ var carrito = [];
 
 export default function crearFactura(inventario){
     
-    carritoDeCompras();
-    calcularPrecioElectrodomestico(inventario, 0, "televisor", "B", "importado");
+    calcularPrecioElectrodomestico();
     console.log(precioTotal);
     console.log(inventario);
 
 }
 
-function calcularPrecioElectrodomestico(inventario, cantidad, tipo, consumo, nacionalidad){
+function calcularPrecioElectrodomestico(){
     
     carrito.forEach(element => {
         precioTotal += element.getPrecio();
@@ -52,10 +51,14 @@ function anadirNeverasCarrito(numero, consumo, nacionalidad, capacidad){
 
 }
 
-
-
-function carritoDeCompras(){
-    anadirTelevisoresCarrito(1, "B", "importado", 37, false);
-    anadirNeverasCarrito(2, "C", "importado", 120);
-    anadirElectrodomesticosCarrito(5, "B", "nacional");
+function carritoDeCompras(tipo, cantidad, consumo, nacionalidad, parametro1, parametro2){
+    if (tipo === "televisor") {
+        anadirTelevisoresCarrito(cantidad, consumo, nacionalidad, parametro1, parametro2);    
+    }
+    if (tipo === "nevera") {
+        anadirNeverasCarrito(cantidad, consumo, nacionalidad, parametro1);    
+    }
+    if (tipo === "electrodomestico") {
+        anadirElectrodomesticosCarrito(cantidad, consumo, nacionalidad);    
+    }
 }
