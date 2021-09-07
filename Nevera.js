@@ -5,6 +5,7 @@ export default class Nevera extends Electrodomesticos{
     constructor(consumo, nacionalidad, capacidad){
         super(consumo, nacionalidad);
         this.capacidad = capacidad;
+        this.tipo = "nevera";
     }
 
     getCapacidad(){

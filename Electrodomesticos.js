@@ -3,6 +3,7 @@ export default class Electrodomesticos{
     constructor(consumo, nacionalidad){
     this.consumo = consumo;
     this.nacionalidad = nacionalidad;
+    this.tipo = "electrodomestico";
     this.precio = 0;
     }
 
@@ -16,6 +17,10 @@ export default class Electrodomesticos{
 
     getPrecio(){
         return this.precio;
+    }
+
+    getTipo(){
+        return this.tipo;
     }
 
     calcularPrecio(){

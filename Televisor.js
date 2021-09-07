@@ -6,6 +6,7 @@ export default class Televisor extends Electrodomesticos{
         super(consumo, nacionalidad);
         this.pulgadas = pulgadas;
         this.tdt = tdt;
+        this.tipo = "televisor";
     }
 
     getPulgadas(){
